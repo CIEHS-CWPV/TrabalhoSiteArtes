@@ -19,6 +19,23 @@
   <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/lightbox.css">
+
+  <style>
+    
+    @media (max-width: 991px) {
+      .header-area .main-nav .logo {
+        max-width: calc(100% - 60px);
+        font-size: 20px !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .header-area .main-nav .menu-trigger {
+        right: 15px !important;
+        top: 23px !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -36,11 +53,11 @@
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="index.html">Início</a></li>
+              <li><a href="index.html#top">Início</a></li>
               <li><a href="meetings.html">Curiosidades</a></li>
-              <li><a href="meeting-details.html" class="active">Detalhes</a></li>
-              <li><a href="index.html">Galeria</a></li>
-              <li><a href="index.html">Império</a></li>
+              <li><a href="index.html#apply">Projeto</a></li>
+              <li><a href="index.html#courses">Características</a></li>
+              <li><a href="meeting-details.html" class="active">Detalhes da Obra</a></li>
             </ul>
             <a class='menu-trigger'>
               <span>Menu</span>
@@ -75,9 +92,6 @@
                   <div class="price">
                     <span>20 a.C.</span>
                   </div>
-                  <div class="date">
-                    <h6>2.08 <span>m</span></h6>
-                  </div>
                   <a href="#"><img
                       src="https://tse1.mm.bing.net/th/id/OIP.HUafaILcBfO9S-HGPjdYdwHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
                       alt="Estátua de Augusto de Prima Porta"></a>
@@ -89,41 +103,33 @@
                   <p>Museus do Vaticano (Braccio Nuovo), Roma, Itália</p>
                   <p class="description">
                     A escultura de <strong>Augusto de Prima Porta</strong> é uma das obras mais icônicas do Império
-                    Romano. Descoberta em 1863 na Vila de Lívia (esposa do imperador), a peça de mármore de 2,08 metros
-                    de altura retrata o primeiro imperador romano, Augusto, em uma postura de comando e liderança
-                    suprema.
+                    Romano. Descoberta em 20 de abril de 1863 na Vila de Lívia (esposa do imperador), em Prima Porta, perto de Roma, a peça de mármore branco possui cerca de 2,03 a 2,30 metros de altura e retrata o primeiro imperador romano em uma postura jovem e forte, transmitindo poder, ordem e autoridade divina.
 
                     <br><br>
-                    <strong>Simbolismo e Política:</strong> A coraça (armadura de couro/metal) é ricamente decorada com
-                    relevos retratando a devolução dos estandartes romanos pelos partas — uma grande vitória
-                    diplomática. Aos seus pés, uma figura do Cupido montado em um golfinho simboliza a ascendência
-                    divina da família Júlia a partir da deusa Vênus.
+                    <strong>Inspiração Grega e Policromia:</strong> A obra possui forte inspiração grega, tendo sua pose copiada da famosa estátua Doríforo, do escultor Policleto. Originalmente, exibia traços de policromia com vestígios de cores como dourado, azul e púrpura.
 
                     <br><br>
-                    <strong>Nosso Projeto Prático:</strong> Como parte do desenvolvimento do trabalho, recriamos a
-                    anatomia e o relevo da escultura de forma artesanal. O foco foi capturar os detalhes marcantes do
-                    rosto augustano e o seu corte de cabelo característico em mechas (conhecido na história da arte como
-                    o penteado de "mola"), trabalhando volumes, textura e relevo em base Rígida.
+                    <strong>Simbolismo Político e Divino:</strong> A couraça (armadura) é decorada com relevos desenhando deuses e a devolução dos estandartes militares pelos Partas, celebrando vitórias romanas. Na base, há um pequeno Cupido montado em um golfinho, indicando a descendência da deusa Vênus na família de Augusto.
                   </p>
                   <div class="row">
                     <div class="col-lg-4">
                       <div class="hours">
                         <h5>Dimensões & Material</h5>
-                        <p>Original: 2,08 metros (Mármore)<br>Projeto: Réplica em Relevo Tridimensional</p>
+                        <p>Original: 2,03m a 2,30m (Mármore)<br>Projeto: Réplica em Relevo Tridimensional</p>
                       </div>
                     </div>
                     <div class="col-lg-4">
                       <div class="location">
                         <h5>Local da Descoberta</h5>
-                        <p>Vila de Lívia, Prima Porta
-                          <br>Roma - Itália (1863)
+                        <p>Villa Lívia, Prima Porta
+                          <br>Roma - Itália (20/04/1863)
                         </p>
                       </div>
                     </div>
                     <div class="col-lg-4">
                       <div class="book now">
                         <h5>Estilo Artístico</h5>
-                        <p>Classicismo Romano<br>Influência Grega (Contrapposto)</p>
+                        <p>Classicismo Romano<br>Influência do Doríforo (Policleto)</p>
                       </div>
                     </div>
                     <div class="col-lg-12">
@@ -169,50 +175,6 @@
   <script src="assets/js/video.js"></script>
   <script src="assets/js/slick-slider.js"></script>
   <script src="assets/js/custom.js"></script>
-  <script>
-    var showSection = function showSection(section, isAnimate) {
-      var
-        direction = section.replace(/#/, ''),
-        reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-        reqSectionPos = reqSection.offset().top - 0;
-
-      if (isAnimate) {
-        $('body, html').animate({
-          scrollTop: reqSectionPos
-        },
-          800);
-      } else {
-        $('body, html').scrollTop(reqSectionPos);
-      }
-
-    };
-
-    var checkSection = function checkSection() {
-      $('.section').each(function () {
-        var
-          $this = $(this),
-          topEdge = $this.offset().top - 80,
-          bottomEdge = topEdge + $this.height(),
-          wScroll = $(window).scrollTop();
-        if (topEdge < wScroll && bottomEdge > wScroll) {
-          var
-            currentId = $this.data('section'),
-            reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-          reqLink.closest('li').addClass('active').
-            siblings().removeClass('active');
-        }
-      });
-    };
-
-    $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
-      e.preventDefault();
-      showSection($(this).attr('href'), true);
-    });
-
-    $(window).scroll(function () {
-      checkSection();
-    });
-  </script>
 </body>
 
 </html>
